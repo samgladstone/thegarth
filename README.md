@@ -59,7 +59,7 @@ The owner of The Garth — a 3-bedroom holiday cottage in Gunnerside, Swaledale 
 
 - [AirBnB Listing](https://airbnb.co.uk/h/thegarth)
 - [WhatsApp Contact](https://wa.me/+447757250718)
-- Domain: `thegarthgunnerside.co.uk`
+- Domain: `garthgunnerside.co.uk`
 
 ---
 

@@ -39,7 +39,7 @@ Initialise the Astro + Tailwind CSS + DaisyUI project, push to the existing GitH
 | # | Uncertainty | Status | Notes |
 |---|---|---|---|
 | 1 | DaisyUI theme choice | Low risk | Developer to select a warm/natural theme; client reviews in Phase 2 |
-| 2 | Domain `thegarthgunnerside.co.uk` not yet purchased | Noted | Not a Phase 1 blocker; flagged for Phase 3 |
+| 2 | Domain `garthgunnerside.co.uk` not yet purchased | Noted | Not a Phase 1 blocker; flagged for Phase 3 |
 
 ---
 
@@ -59,6 +59,6 @@ Initialise the Astro + Tailwind CSS + DaisyUI project, push to the existing GitH
 
 - **Phase 2:** Replace all placeholder meta tag values (title, description, OG image) with real content
 - **Phase 2:** Add real content, photos, and CTAs
-- **Phase 3:** Purchase `thegarthgunnerside.co.uk` and point DNS to Vercel
+- **Phase 3:** Purchase `garthgunnerside.co.uk` and point DNS to Vercel
 - **Phase 3:** Connect Vercel to custom domain and verify HTTPS
 - **Housekeeping:** Add `.vscode/settings.json` + `extensions.json` and `.gitignore` rule to selectively commit only project-relevant VS Code config

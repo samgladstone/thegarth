@@ -20,7 +20,7 @@
 | **Tradeoffs** | All are free for static sites. Vercel has the best Astro integration and is already familiar to the developer. |
 | **Recommendation** | **Vercel free tier** — zero config deployment from a GitHub repo. |
 | **Risks** | None material for this use case. |
-| **Deferred** | Custom domain DNS configuration (`thegarthgunnerside.co.uk`) to be done at deploy time. |
+| **Deferred** | Custom domain DNS configuration (`garthgunnerside.co.uk`) to be done at deploy time. |
 
 ---
 

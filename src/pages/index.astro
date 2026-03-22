@@ -40,10 +40,13 @@ const reviews = [
 const gallery = [
   { src: '/images/gallery-1.jpg', alt: 'Beautiful view up Swaledale from the kitchen' },
   { src: '/images/gallery-2.jpg', alt: 'The Garth exterior patio' },
-  { src: '/images/gallery-3.jpg', alt: 'Cosy living room with wood burner' },
+  { src: '/images/gallery-3.jpg', alt: 'Cosy living room with open fire' },
   { src: '/images/gallery-4.jpg', alt: 'Main bedroom with dale views' },
   { src: '/images/gallery-5.jpg', alt: 'Kitchen and dining area' },
   { src: '/images/gallery-6.jpg', alt: 'Second bedroom with stunning views' },
+  { src: '/images/gallery-7.jpg', alt: 'Second bedroom' },
+  { src: '/images/gallery-8.jpg', alt: 'View of the house from the valley' },
+  { src: '/images/gallery-9.jpg', alt: 'Third bedroom' },
 ];
 ---
 
@@ -145,6 +148,17 @@ const gallery = [
         Bedrooms: Super King · Twin · Twin
       </p>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+
+        <!-- Hero image: shown only on mobile (fills the 10th slot in a 2×5 grid) -->
+        <div class="aspect-[4/3] overflow-hidden rounded-xl md:hidden">
+          <img
+            src="/images/hero.jpg"
+            alt="Panoramic view from The Garth across Swaledale"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+
+        <!-- 9 gallery images: shown on all sizes (3×3 on desktop, fill cols 2–10 on mobile) -->
         {gallery.map(({ src, alt }) => (
           <div class="aspect-[4/3] overflow-hidden rounded-xl">
             <img
@@ -154,6 +168,7 @@ const gallery = [
             />
           </div>
         ))}
+
       </div>
     </div>
   </section>

@@ -36,7 +36,7 @@
 
 **Goal:** Site is publicly live on the correct domain and discoverable.
 
-- Point `thegarthgunnerside.co.uk` DNS to Vercel
+- Point `garthgunnerside.co.uk` DNS to Vercel
 - Verify HTTPS is active
 - Submit sitemap to Google Search Console
 - Manually verify WhatsApp and AirBnB links on mobile
