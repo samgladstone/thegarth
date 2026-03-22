@@ -1,20 +1,277 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const title = 'The Garth Gunnerside — [Placeholder]';
-const description = 'A beautiful holiday cottage in Gunnerside, Swaledale. [Placeholder description — to be updated in Phase 2.]';
+const title = 'The Garth Gunnerside — Holiday Cottage in Swaledale with Panoramic Views';
+const description = 'Stay at The Garth — a beautiful 3-bedroom holiday cottage in Gunnerside, Swaledale. Sleeps 6, dog-friendly, with the best panoramic views in the Yorkshire Dales. Enquire direct via WhatsApp.';
+
+const WHATSAPP_URL = 'https://wa.me/+447757250718';
+const AIRBNB_URL = 'https://airbnb.co.uk/h/thegarth';
+const MAPS_URL = 'https://maps.google.com/?q=Gunnerside,+North+Yorkshire,+UK';
+
+const highlights = [
+  { icon: '🏔️', label: 'Best views in the dale' },
+  { icon: '🛏️', label: '3 bedrooms · sleeps 6' },
+  { icon: '💻', label: 'Dedicated workspace' },
+  { icon: '🔥', label: 'Open fireplace' },
+  { icon: '🚗', label: 'Private parking' },
+  { icon: '📶', label: 'Free fast WiFi' },
+  { icon: '🍳', label: 'Fully equipped kitchen' },
+  { icon: '🌿', label: 'Peaceful countryside setting' },
+];
+
+const reviews = [
+  {
+    quote: "What a jewel in the Yorkshire Dales. I will never forget waking up to the most beautiful countryside views I’ve ever had the pleasure to see!",
+    author: "Daniel",
+    location: "Australia",
+  },
+  {
+    quote: "Another great stay at the Garth.. we can't get enough of the place! Thank you for hosting us once again... no doubt we'll be back!",
+    author: "Chavi",
+    location: "Manchester",
+  },
+  {
+    quote: "Always enjoy staying at the Garth. Monica's a great host and we always have a wonderful time. Looking forward to our next visit!!",
+    author: "Peter",
+    location: "Indiana, US",
+  },
+];
+
+const gallery = [
+  { src: '/images/gallery-1.jpg', alt: 'Beautiful view up Swaledale from the kitchen' },
+  { src: '/images/gallery-2.jpg', alt: 'The Garth exterior patio' },
+  { src: '/images/gallery-3.jpg', alt: 'Cosy living room with wood burner' },
+  { src: '/images/gallery-4.jpg', alt: 'Main bedroom with dale views' },
+  { src: '/images/gallery-5.jpg', alt: 'Kitchen and dining area' },
+  { src: '/images/gallery-6.jpg', alt: 'Second bedroom with stunning views' },
+];
 ---
 
 <Layout title={title} description={description}>
-  <main class="min-h-screen flex flex-col items-center justify-center bg-base-200">
-    <div class="card w-full max-w-lg shadow-xl bg-base-100">
-      <div class="card-body items-center text-center gap-4">
-        <h1 class="card-title text-3xl font-bold">The Garth</h1>
-        <p class="text-base-content/70">
-          A holiday cottage in Gunnerside, Swaledale.
-        </p>
-        <div class="badge badge-neutral">Coming soon</div>
+
+  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <img
+      src="/images/hero.jpg"
+      alt="Panoramic view from The Garth across Swaledale"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="relative z-10 text-center text-white px-6 max-w-3xl mx-auto">
+      <p class="uppercase tracking-widest text-sm font-medium mb-4 text-white/80">Gunnerside · Swaledale · Yorkshire Dales</p>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">The Garth</h1>
+      <p class="text-xl md:text-2xl font-light mb-10 text-white/90">
+        The best views in the dale — a 3-bedroom retreat in the heart of Swaledale
+      </p>
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-lg bg-[#25D366] hover:bg-[#1ebe5d] text-white border-none gap-2 text-lg"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.845L.057 23.428a.75.75 0 0 0 .915.915l5.638-1.471A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 0 1-4.964-1.36l-.355-.212-3.683.96.98-3.59-.232-.368A9.72 9.72 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+        </svg>
+        Enquire via WhatsApp
+      </a>
+    </div>
+    <!-- scroll hint -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ─── OVERVIEW STRIP ───────────────────────────────────────── -->
+  <section class="bg-primary text-primary-content py-6">
+    <div class="max-w-4xl mx-auto px-6 flex flex-wrap justify-center gap-8 text-center">
+      <div>
+        <p class="text-3xl font-bold">6</p>
+        <p class="text-sm uppercase tracking-wide opacity-80">Guests</p>
+      </div>
+      <div class="w-px bg-primary-content/30 hidden sm:block"></div>
+      <div>
+        <p class="text-3xl font-bold">3</p>
+        <p class="text-sm uppercase tracking-wide opacity-80">Bedrooms</p>
+      </div>
+      <div class="w-px bg-primary-content/30 hidden sm:block"></div>
+      <div>
+        <p class="text-3xl font-bold">270°</p>
+        <p class="text-sm uppercase tracking-wide opacity-80">Dale Views</p>
       </div>
     </div>
-  </main>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+  <section class="py-20 bg-base-100">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-base-content">A Swaledale Panorama</h2>
+      <div class="prose prose-lg text-base-content/80 space-y-4">
+        <p>
+          The Garth sits prominently in the valley at Gunnerside, with a position that many guests say gives the finest views in the Yorkshire Dales. From the moment you arrive, the sweep of Swaledale — stretching up to the high moors and down through the patchwork of stone walls and meadows — sets the tone for your stay.
+        </p>
+        <p>
+          The property has been thoughtfully designed to make the most of its surroundings. Large windows wrap around the house, framing the dale from almost every room and flooding the interior with light. The living room centres on the view, has a crackling open fire, and a fully equipped kitchen makes self-catering a pleasure. Three bedrooms sleep up to six guests comfortably, with everything you need for a relaxed countryside escape.
+        </p>
+        <p>
+          Gunnerside is a quietly beautiful village deep in Swaledale — unspoilt, unhurried, and perfectly placed for walking, cycling, and exploring the national park. The Garth is an ideal base whether you're here for the fells or simply to slow down and take in one of England's most breathtaking landscapes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HIGHLIGHTS ───────────────────────────────────────────── -->
+  <section class="py-20 bg-base-200">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10 text-base-content text-center">What's Included</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+        {highlights.map(({ icon, label }) => (
+          <div class="flex flex-col items-center gap-3 text-center p-4 bg-base-100 rounded-2xl shadow-sm">
+            <span class="text-3xl">{icon}</span>
+            <span class="text-sm font-medium text-base-content/80">{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── GALLERY ───────────────────────────────────────────────── -->
+  <section class="py-20 bg-base-100">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-2 text-base-content text-center">The Property</h2>
+      <p class="text-center text-base-content/60 mb-10 text-success">
+        Bedrooms: Super King · Twin · Twin
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        {gallery.map(({ src, alt }) => (
+          <div class="aspect-[4/3] overflow-hidden rounded-xl">
+            <img
+              src={src}
+              alt={alt}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── REVIEWS ───────────────────────────────────────────────── -->
+  <section class="py-20 bg-base-200">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10 text-base-content text-center">What Guests Say</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {reviews.map(({ quote, author, location }) => (
+          <div class="card bg-base-100 shadow-sm">
+            <div class="card-body gap-4">
+              <div class="text-primary text-2xl leading-none">"</div>
+              <p class="text-base-content/80 text-sm leading-relaxed italic">{quote}</p>
+              <div class="mt-auto pt-2 border-t border-base-200">
+                <p class="font-semibold text-sm text-base-content">{author}</p>
+                <p class="text-xs text-base-content/60">{location}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-10">
+        <a
+          href="https://www.airbnb.co.uk/rooms/16309868/reviews"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline btn-primary gap-2"
+        >
+          Read all reviews on Airbnb
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FIND US ───────────────────────────────────────────────── -->
+  <section class="py-20 bg-base-100">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-base-content">Find Us</h2>
+      <p class="text-base-content/70 mb-8 text-lg">
+        The Garth is in Gunnerside — a village in the heart of Swaledale, North Yorkshire, within the Yorkshire Dales National Park. Accessible by car via the B6270 through Richmond.
+      </p>
+      <p class="text-base-content/70 mb-8 text-lg">
+      In summer, <a class="text-success" href="https://littlewhitebus.co.uk/timetables/">The Little White Bus</a> serves the communities within the dale.
+      </p>
+      <a
+        href={MAPS_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-outline btn-primary gap-2"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+          <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-2.079 3.699-5.101 3.699-9.327 0-4.694-3.806-8.5-8.5-8.5s-8.5 3.806-8.5 8.5c0 4.226 1.755 7.248 3.699 9.327a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.144.742zM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" clip-rule="evenodd" />
+        </svg>
+        Open in Google Maps
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── CTA BANNER ───────────────────────────────────────────── -->
+  <section class="py-20 bg-primary text-primary-content">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to book your stay?</h2>
+      <p class="text-primary-content/80 mb-10 text-lg">
+        Get in touch via WhatsApp for availability and rates — we'd love to welcome you to Swaledale.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-lg bg-[#25D366] hover:bg-[#1ebe5d] text-white border-none gap-2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.845L.057 23.428a.75.75 0 0 0 .915.915l5.638-1.471A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 0 1-4.964-1.36l-.355-.212-3.683.96.98-3.59-.232-.368A9.72 9.72 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+          </svg>
+          Enquire via WhatsApp
+        </a>
+        <a
+          href={AIRBNB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-lg btn-outline border-primary-content/50 text-primary-content hover:bg-primary-content hover:text-primary gap-2"
+        >
+          View on Airbnb
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────────── -->
+  <footer class="bg-base-300 py-8">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-base-content/60">
+      <p>© {new Date().getFullYear()} The Garth, Gunnerside</p>
+      <a
+        href={AIRBNB_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link link-hover"
+      >
+        View on Airbnb
+      </a>
+    </div>
+  </footer>
+  <!-- ─── FLOATING WHATSAPP ──────────────────────────────────── -->
+  <a
+    href={WHATSAPP_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Enquire via WhatsApp"
+    class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5d] shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.845L.057 23.428a.75.75 0 0 0 .915.915l5.638-1.471A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 0 1-4.964-1.36l-.355-.212-3.683.96.98-3.59-.232-.368A9.72 9.72 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+    </svg>
+  </a>
+
 </Layout>
+

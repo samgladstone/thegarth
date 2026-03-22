@@ -7,16 +7,54 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-const ogImage = '/og-placeholder.png';
+const ogImage = '/hero.jpg';
 const siteUrl = 'https://thegarthgunnerside.co.uk';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "The Garth",
+  "description": description,
+  "url": siteUrl,
+  "image": `${siteUrl}${ogImage}`,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gunnerside",
+    "addressRegion": "North Yorkshire",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "54.383",
+    "longitude": "-2.022"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Panoramic dale views", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Private parking", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Open fire", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Dog friendly", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Fully equipped kitchen", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true }
+  ],
+  "numberOfRooms": 3,
+  "occupancy": {
+    "@type": "QuantitativeValue",
+    "maxValue": 6
+  },
+  "containedInPlace": {
+    "@type": "Place",
+    "name": "Swaledale, Yorkshire Dales"
+  }
+};
 ---
 
-<html lang="en">
+<html lang="en" data-theme="autumn">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48" />
 
     <!-- Primary meta -->
     <title>{title}</title>
@@ -34,6 +72,9 @@ const siteUrl = 'https://thegarthgunnerside.co.uk';
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <slot />
