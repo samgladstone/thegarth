@@ -51,6 +51,10 @@ The owner of The Garth — a 3-bedroom holiday cottage in Gunnerside, Swaledale 
 - Multi-page site structure
 - Analytics beyond basic Vercel analytics
 
+## Key Documents
+- [Implementation Plan](./docs/PLAN.md)
+- [Tech Decisions](./docs/TECHNICAL.md)
+
 ## Key Links
 
 - [AirBnB Listing](https://airbnb.co.uk/h/thegarth)
